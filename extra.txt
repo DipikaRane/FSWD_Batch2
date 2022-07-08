@@ -1,0 +1,16 @@
+Installing IDE
+>>1>> Visual Studio Code
+>>2>>Git bash
+
+
+>>Git Bash
+>> only one time
+git clone https://github.com/DipikaRane/fswdsummerintern.git
+go inside fswdsummerintern
+git pull
+
+
+>>every time do this
+git add .
+git commit -m "changes"
+git push -u origin main/master
