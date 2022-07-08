@@ -5,12 +5,33 @@ Installing IDE
 
 >>Git Bash
 >> only one time
-git clone https://github.com/DipikaRane/fswdsummerintern.git
+git clone https://github.com/DipikaRane/FSWD_Batch2.git
 go inside fswdsummerintern
+>>every time
+go inside FSWD_Batch2
 git pull
+
+
+>>When you craete a repository
+>>first time
+1. go to destination folder
+2. git Bash
+3. write git init
+4. git add .
+5. git commit -m "any message"
+6. git remote add origin "https://github.com/DipikaRane/FSWD_Batch2.git"
+7. git push -u origin master
 
 
 >>every time do this
 git add .
 git commit -m "changes"
 git push -u origin main/master
+
+
+>>>HTML>>
+block-level elements <p></p>, <div></div>,<h1></h1>...<h6></h6>
+inline elements <span></span>, <image></image> ,<iframe></iframe>, <input>
+
+>>>CSS>>>>
+Selectors --- Id, class, element/tag
