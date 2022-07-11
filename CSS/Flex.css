@@ -1,0 +1,10 @@
+.flex-container{
+    background-color: black;
+}
+.flex-container div{
+    width:200px;
+    height:200px;
+    background-color:white;
+    margin:2%;
+    display: inline-block;
+}

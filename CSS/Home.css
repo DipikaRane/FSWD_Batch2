@@ -7,11 +7,11 @@
     background-size: cover;
     color:whitesmoke;
     width:100%;
-    height:400px;
+    height:450px;
     /* border:2px solid green; */
     font-size:20px;
     border-radius:10px;
-    background-size: 100% 400px;
+    background-size: 100% 450px;
 }
 #logo>img {
     border-radius: 50%;
@@ -42,7 +42,7 @@
 }
 .tilecomponent:hover{
     transform:scale(1.1);
-    
+    cursor:pointer;
 }
 .imgdiv{
     /* border:1px solid red; */
@@ -61,4 +61,12 @@
 font-size:2rem;
 text-align:center;
 color:rebeccapurple;
+}
+#city{
+    margin-left:27%;
+}
+select{
+    font-size:25px;
+    width:350px;
+    height:40px;
 }
