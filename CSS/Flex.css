@@ -8,3 +8,19 @@
     margin:2%;
     display: inline-block;
 }
+.container{
+    background-color:green;
+    height:100%;
+}
+/*.container-fluid{
+    height:200px;
+    background-color:purple;
+} */
+.jumbotron{
+    background-color:green;
+    height:300px;
+}
+span,p{
+font-size:25px;
+color:red;
+}

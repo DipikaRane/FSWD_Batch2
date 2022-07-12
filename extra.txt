@@ -35,3 +35,9 @@ inline elements <span></span>, <image></image> ,<iframe></iframe>, <input>
 
 >>>CSS>>>>
 Selectors --- Id, class, element/tag
+
+>>>Bootstrap>>>>
+used for making website/webpage responsive
+Bootstrap 3
+Bootstrap 4
+Bootstrap 5

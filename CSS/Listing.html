@@ -3,11 +3,15 @@
     <head>
         <title>Listing Page</title>
         <link rel="stylesheet" href="Listing.css"/>
+        <!-- Bootstrap 3 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     </head>
     <body>
         <div id="heading">
             <a href="Home.html"><div class="imgHome">
-                <img src="https://i.ibb.co/8j1dMjB/swiggy.jpg" alt="home"/>
+                <span class="glyphicon glyphicon-home" style="font-size:50px; color:white;"></span>
             </div></a>
             <center>
             <h1>Listing Page</h1>
@@ -15,17 +19,45 @@
         </div>
         <div id="filter">
             <div class="choice">
-                <input type="radio">Veg</input>
-                <input type="radio">Nov-Veg</input>
+                <h3>Choice</h3>
+                <input type="radio" >Veg</input><br/>
+                <input type="radio" >Nov-Veg</input>
             </div>
-        </div>
+            <hr/>
+            <div class="type">
+                <h3>Food Type</h3>
+                <input type="radio">All</input><br/>
+                <input type="radio">North-Indian</input><br/>
+                <input type="radio">South-Indian</input><br/>
+                <input type="radio">Gujrati</input><br/>
+                <input type="radio">Maharashtrian</input>
+            </div>
+            <hr/>
+            <div class="price">
+                <h3>Price</h3>
+                <input type="checkbox">Rs. 100-200</input><br/>
+                <input type="checkbox">Rs. 201-300</input><br/>
+                <input type="checkbox">Rs. 301-450</input><br/>
+                <input type="checkbox">Rs. 451-800</input>
+            </div>
+            <hr/>
+            <div class="range">
+                <h3>Price range</h3>
+                <input type="radio">High to Low</input><br/>
+                <input type="radio">Low to High</input>
+            </div>
+            
         <div class="hotels">
             <div class="hotel-card">
                 <div class="hotelimgdiv">
                     <img src="images/hotel/ph.png" alt="img"/>
                 </div>
                 <div class="hoteltitle">
-                    <h3>Yummy Pizza</h3>
+                    <h2>Yummy Pizza</h2>
+                    <h3>food Street, City Mall, Bathinda</h3>
+                    <h3>Rating : 4 Star</h3>
+                    <h3>Price : Rs. 200/- </h3>
+                    <button class="btn btn-info">Proceed</button>
                 </div>
             </div>
             <div class="hotel-card">
@@ -33,7 +65,11 @@
                     <img src="images/hotel/ph.png" alt="img"/>
                 </div>
                 <div class="hoteltitle">
-                    <h3>Yummy Pizza</h3>
+                    <h3>Blue Heaven</h3>
+                    <h3>Shop No.17,Sector 13,South Delhi</h3>
+                    <h3>Rating : 4.5 Star</h3>
+                    <h3>Price : Rs. 300/- </h3>
+                    <button class="btn btn-primary">Proceed</button>
                 </div>
             </div>
             <div class="hotel-card">
@@ -41,7 +77,11 @@
                     <img src="images/hotel/ph.png" alt="img"/>
                 </div>
                 <div class="hoteltitle">
-                    <h3>Yummy Pizza</h3>
+                    <h3>Dominos Pizza</h3>
+                    <h3>100 feet Road, Patiala</h3>
+                    <h3>Rating : 4.3 Star</h3>
+                    <h3>Price : Rs. 400/- for Medium</h3>
+                    <button class="btn btn-warning">Proceed</button>
                 </div>
             </div>
         </div>

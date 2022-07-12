@@ -1,6 +1,9 @@
 /* h1{
     color:red;
 } */
+body{
+    margin:auto;
+}
 #heading{
     background-image: url('images/hotel/foodWallpaper.png');
     background-repeat: no-repeat;
@@ -10,8 +13,10 @@
     height:450px;
     /* border:2px solid green; */
     font-size:20px;
-    border-radius:10px;
+    /* border-radius:10px; */
     background-size: 100% 450px;
+    margin-top: -20px;
+
 }
 #logo>img {
     border-radius: 50%;
@@ -22,8 +27,8 @@
     animation:movelogo 10s infinite;
 }
 @keyframes movelogo{
-    0% {margin-left:80%}
-    100%{margin-left:0%}
+    /* 0% {margin-left:80%} */
+    100%{margin-left:99%}
 }
 #main-container{
     max-width:80%;
@@ -69,4 +74,7 @@ select{
     font-size:25px;
     width:350px;
     height:40px;
+}
+.navbar{
+    margin-bottom: 0px;
 }
