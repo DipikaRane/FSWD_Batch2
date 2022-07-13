@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Carousel</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="bts3.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="container">
+        <div id="mySlider" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#mySlider" data-slide-to="0"></li>
+                <li data-target="#mySlider" data-slide-to="1"></li>
+                <li data-target="#mySlider" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="back.jpg" class="simage" alt="back"/>
+                </div>
+                <div class="item">
+                    <img src="bg.jpg" class="simage" alt="bg"/>
+                </div>
+                <div class="item">
+                    <img src="business.png" class="simage" alt="business"/>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#mySlider" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#mySlider" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+    </div>
+    <button type="button" class="btn btn-outline-primary">Primary</button>
+    </body>
+</html>
