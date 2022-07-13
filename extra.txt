@@ -39,5 +39,12 @@ Selectors --- Id, class, element/tag
 >>>Bootstrap>>>>
 used for making website/webpage responsive
 Bootstrap 3
+>>>
+Bootstrap 3 grid classes :
+col-xs < 768px – for phone screen
+sm > 768px – for tablet screen
+md > 992px – for small laptops screen
+lg > 1200px – for laptops and desktops screen
+>>>
 Bootstrap 4
 Bootstrap 5
