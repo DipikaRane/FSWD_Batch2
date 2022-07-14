@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bootstrap 4</title>
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+    .card{
+        width:300px;
+        height:450px;
+        margin:3%;
+        border:2px solid gray;
+        display:inline-block;
+        border-radius: 10px;
+    }
+    .card:hover{
+        transform: scale(1.1);
+    }
+    .card-title{
+        width:297px;
+        height:330px;
+    }
+    .card-title>img{
+        width:100%;
+        height:100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    #showdiv{
+        width:200px;
+        height:200px;
+        background-color:cyan;
+        /* display:none; */
+        display:block;
+    }
+</style>    
+</head>
+    <body>
+        <div class="container-fluid">
+            <div class="spinner-border"></div>
+            <div class="spinner-border text-warning"></div>
+            <div class="spinner-border text-primary"></div>
+            <div class="spinner-border text-muted"></div>
+            <div class="spinner-border text-info"></div>
+            <div class="spinner-border text-success"></div>
+            <div class="spinner-border text-danger"></div>
+            <hr/>
+                    <form style="width:60%;" method="" action="">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <label>Employee Id</label>
+                                    <input class="form-control" name="eid" value="TECH003" disabled/>
+                                </div>
+                                <div class="col-lg-6">
+                                    <label>Comapny Name</label>
+                                    <input class="form-control" name="cname" value="Techvanto" disabled/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <label>Employee Name</label>
+                                    <input class="form-control" name="ename" placeholder="Enter Your Name"/>
+                                </div>
+                                <div class="col-lg-6">
+                                    <label>Designation</label>
+                                    <input class="form-control" name="desg"/>
+                                </div>
+                            </div>
+                        </div>
+                        <center><button type="submit" class="btn btn-primary">Submit</button></center>
+                    </form>
+                    <hr/>
+                <div class="card">
+                    <div class="card-title">
+                        <img src="bg.jpg"/>
+                    </div>
+                    <div class="card-body">
+                        <h3>Food Adda</h3>
+                        <p>Some text lorem ipsum.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title">
+                        <img src="back.jpg"/>
+                    </div>
+                    <div class="card-body">
+                        <h3>Food Plaza</h3>
+                        <p>Some text lorem ipsum.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="showdiv">
+                <h1>TVA</h1>
+            </div>
+    </body>
+</html>

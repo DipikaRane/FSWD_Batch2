@@ -47,4 +47,16 @@ md > 992px – for small laptops screen
 lg > 1200px – for laptops and desktops screen
 >>>
 Bootstrap 4
+col-xs <576px
+col-sm >576px
+col-md > 768px
+col-lg >992px
+col-xl >1200px
+
 Bootstrap 5
+xs < 576px
+sm > 576px
+md > 768px
+lg > 992px
+xl > 1200px
+xxl> 1400px
