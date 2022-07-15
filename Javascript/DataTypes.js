@@ -2,7 +2,7 @@
 //string, number, boolean
 
 //string --anything that comes in  " ",' ',``,
-"Hii", 'Hiii', `HIII`, "2321", "hjdsl873283" ,"true", "false"
+"Hii", 'Hiii', `HIII`, "2321", "hjdsl873283" ,"true", "false",
 
 //number -- any number integer, decimal, whole number
 672, 678326832329, 6832.8909

@@ -60,3 +60,9 @@ md > 768px
 lg > 992px
 xl > 1200px
 xxl> 1400px
+
+Add/Install extensions
+>> Tabnine
+>>Auto Close Tag
+>>Git lense
+>>EsList
