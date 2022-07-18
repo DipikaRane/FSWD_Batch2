@@ -123,3 +123,16 @@ parseInt(b)
 var c="123Delhi123"
 parseInt(c)
 123
+
+//isNaN -- is it a string or not ,, checking is Not a Number
+var a=true
+isNaN(a)
+false
+var a='true'
+undefined
+isNaN(a)
+true
+var a=15
+undefined
+isNaN(a)
+false

@@ -9,7 +9,7 @@
     display: inline-block;
 }
 .container{
-    background-color:green;
+    background-image: linear-gradient(to right, red , yellow);
     height:100%;
 }
 /*.container-fluid{
@@ -17,7 +17,7 @@
     background-color:purple;
 } */
 .jumbotron{
-    background-color:green;
+    background-image:linear-gradient(to left, green, white,blue);
     height:300px;
 }
 span,p{
