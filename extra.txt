@@ -65,4 +65,7 @@ Add/Install extensions
 >> Tabnine
 >>Auto Close Tag
 >>Git lense
->>EsList
+>>EsLint
+
+imgBB for making image url
+https://imgbb.com/
