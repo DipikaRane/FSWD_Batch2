@@ -48,9 +48,24 @@ function calc(opt){
     output.innerText=out
 }
 
-// function clearAll(){
-//     var c="output"
-//     docuement.getElementById('first').value=" ";
-//     docuement.getElementById('second').value=" ";
-//     document.getElementsByClassName('output')[0].innerText=`${c}`
-// }
+function clearAll(){
+    var c="Output";
+    document.getElementById('first').value=" ";
+    document.getElementById('second').value=" ";
+    document.getElementsByClassName('output')[0].innerText=`${c}`
+}
+function backspace(){
+    var a=document.getElementById('first').value;
+    var b=document.getElementById('second').value;
+    a=a.replace(/ /g,'');
+    a=a.slice(0,-1);
+    document.getElementById('first').value=a;
+    b=b.replace(/ /g,'');
+    b=b.slice(0,-1);
+    document.getElementById('second').value=b;
+}
+
+function orderId(){
+    var oid=`TVA${Math.floor(Math.random()*1000)}`
+    document.getElementById('oid').value=oid;
+}

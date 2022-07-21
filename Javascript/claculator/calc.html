@@ -8,10 +8,12 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     </head>
     <body style="background-color:black;">
+        
         <div class="container">
             <div id="calc">
                 <center><h3>Calculator</h3></center>
                 <div class="inputs">
+                    <input id="oid" name="oid" disabled/>
                     <input placeholder="First Value" id="first" name="first"/><br/>
                     <br/>
                     <input placeholder="Second Value" id="second" name="second"/>
@@ -26,11 +28,12 @@
                 <div class="clear">
                     <button onclick="clearAll()" class="btn btn-primary">Clear</button>
                     <button onclick="backspace()"class="btn btn-primary">Backspace</button>
-                </div>
-                <center>
-                    <div class="output">Output</div>
-                </center>
+                </div>              
+                <div class="output">Output</div>
             </div>            
         </div>
+        <script>
+            window.onload=orderId();
+        </script>
     </body>
 </html>

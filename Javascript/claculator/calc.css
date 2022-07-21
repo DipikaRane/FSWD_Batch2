@@ -16,12 +16,15 @@ body{
     box-shadow:8px 8px 8px white;
 }
 .output{
-    color:white;font-size: 18px;
+    margin-left:35%;
+    color:white;
+    font-size: 18px;
 }
 .inputs{
     font-size:18px;
     margin:15%;
-    width:60%
+    width:60%;
+    margin-left:22%;
 }
 .function{
     margin-left:20%;
