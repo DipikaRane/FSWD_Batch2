@@ -2,6 +2,7 @@ Installing IDE
 >>1>> Visual Studio Code
 >>2>>Git bash
 >>3>>> Node.js https://nodejs.org/en/download/
+>>4>> MongoDB https://www.mongodb.com/try/download/community
 
 
 
@@ -71,3 +72,11 @@ Add/Install extensions
 
 imgBB for making image url
 https://imgbb.com/
+
+
+some method>>>>>>>>
+GET
+POST
+DELETE
+UPDATE
+PUT
