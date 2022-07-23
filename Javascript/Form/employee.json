@@ -1,0 +1,9 @@
+// to save the data submitted from FORM in a json file
+// install nodejs
+// open cmd as administrator
+// type npm i -g json-server
+//close cmd
+
+{
+    "employee":[]
+}
