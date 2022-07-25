@@ -1,0 +1,19 @@
+{
+  "name": "nodemodule",
+  "version": "1.0.0",
+  "description": "modules study",
+  "main": "index.js",
+  "scripts": {
+    "test": "start, npm , node"
+  },
+  "keywords": [
+    "node",
+    "ap"
+  ],
+  "author": "Dipika",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongodb": "^4.8.0"
+  }
+}

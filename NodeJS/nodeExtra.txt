@@ -1,0 +1,36 @@
+Nodejs is a backend language
+what is backend language? --- backend listens the request sent by frontend
+
+approaches to understand nodejs.
+-- ATM approach - synchronous I/O, blocking 
+--Pizza Shop approach - asynchronous I/O, non-blocking.
+
+Nodejs :  Nodejs is a single threaded, non-blocking, asynchronous I/O
+whuch does not wait for the response to the first request but simply continues processing
+with the next request.
+
+callback : when one request is completed, something comes in response.
+This is called as callback.
+
+npm -- node package manager
+how to start the node/npm?
+1. nodejs must be installed in your system
+2. open terminal/cmd
+3. navigate to folder where you want to create node/api application
+4. type > npm init
+5. answer all questions
+6. type yes and hit enter
+
+
+package.json is an entry point to the node application.
+
+steps to install packages>>
+1. open terminal/cmd
+2. navigate to the path
+3. type npm i packagename  e.g npm i mongodb
+
+
+some node modules >>> 
+{how to start>> in terminal go to path and type node filename.js}
+OS module
+FS module
