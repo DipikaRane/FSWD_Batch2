@@ -34,3 +34,22 @@ some node modules >>>
 {how to start>> in terminal go to path and type node filename.js}
 OS module
 FS module
+
+local dependencies
+>> local to folder
+>>used in same folder
+>> do not need admin access
+
+Global dependencies
+>>installed in your system
+>>used for any application
+>>only those packages that helps to start, build, test the application
+>>need admin access
+
+steps to install the global dependencies/packages
+>>  open terminal/cmd as administrator/
+>>  npm i -g packagename  //for mac/linux -- sudo npm i -g packagename
+>> close terminal/cmd
+
+npm i -g nodemon
+>>nodemon helps to do the continuous development

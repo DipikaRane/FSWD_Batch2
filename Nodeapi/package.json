@@ -1,19 +1,22 @@
 {
-  "name": "nodemodule",
+  "name": "api",
   "version": "1.0.0",
-  "description": "modules study",
+  "description": "to create project apis",
   "main": "index.js",
   "scripts": {
-    "start": "node static.js",
-    "dev":"nodemon static.js"
+    "start":"node app.js",
+    "dev":"nodemon app.js"
+
   },
   "keywords": [
     "node",
-    "api"
+    "api",
+    "nodemon"
   ],
   "author": "Dipika",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
