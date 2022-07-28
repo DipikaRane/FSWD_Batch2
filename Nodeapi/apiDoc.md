@@ -11,3 +11,10 @@ http://localhost:8520/mealtype/2 --- mealtypedata with mealtype_id
 
 http://localhost:8520/restmenu  ---restuarantMenu 
 http://localhost:8520/restmenu/4  ---restuarantMenu with menu_id
+
+restaurants with respect to state_id
+http://localhost:8520/restaurants?state=state_id
+e.g.: http://localhost:8520/restaurants?state=1
+
+get the menus in bulk/array
+http://localhost:8520/menus

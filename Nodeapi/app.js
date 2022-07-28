@@ -2,16 +2,20 @@ var express=require('express');
 var dotenv=require('dotenv');
 var app = express();
 var mongo = require('mongodb');
+var bodyParser=require('body-parser');
 var MongoClient=mongo.MongoClient;
 dotenv.config();
 const mongoUrl=process.env.mongoLiveUrl;
 var port=process.env.PORT || 8124;
+app.use(bodyParser.urlencoded({extended:true}))
+app.use(bodyParser.json());
 var db;
 //first default route
 app.get('/',(req,res)=>{
     res.send("<h1>Hi from Express</h1>");
 })
 
+//api for location
 app.get('/location',(req,res)=>{
     db.collection('location').find().toArray((err,result)=>{
         if(err) throw err;
@@ -29,6 +33,21 @@ app.get('/location/:id',(req,res)=>{
         res.send(result);
     })
 })
+
+//restaurants wrt state_id example queryparams
+app.get('/restaurants',(req,res)=>{
+    var query={};
+    if(req.query.state){
+        query={state_id:Number(req.query.state)}
+    }
+    // console.log('query',query);
+    // res.send('querystate');
+    db.collection('restdata').find(query).toArray((err,result)=>{
+        if(err) throw err;
+        res.send(result);
+    })
+})
+
 app.get('/rest',(req,res)=>{
     db.collection('restdata').find().toArray((err,data)=>{
         if(err) throw err;
@@ -62,6 +81,16 @@ app.get('/mealtype/:id',(req,res)=>{
     })
 })
 
+app.post('/menus',(req,res)=>{
+    console.log(req.body);
+    // res.send(req.body);
+    db.collection('restmenu')
+    .find({menu_id:{$in:req.body}})
+    .toArray((err,result)=>{
+        if(err) throw err;
+        res.send(result);
+    })
+})
 app.get('/restmenu',(req,res)=>{
     db.collection('restmenu').find().toArray((err,data)=>{
         if(err) throw err;
@@ -76,6 +105,42 @@ app.get('/restmenu/:id',(req,res)=>{
     db.collection('restmenu').find({"menu_id":id}).toArray((err,result)=>{
         if(err) throw err;
         res.send(result);
+    })
+})
+
+//to see all orders
+app.get('/orders',(req,res)=>{
+    db.collection('orders').find().toArray((err,result)=>{
+        if(err) throw err;
+        res.send(result);
+    })
+})
+//to place order
+app.post('/placeOrder',(req,res)=>{
+    // console.log(req.body);
+    // res.send('ok')
+    db.collection('orders').insertMany(req.body,(err,result)=>{
+        if(err) throw err;
+        res.send("Order Placed")
+    })
+})
+
+//to delete one order
+app.delete('/deleteOrder/:id',(req,res)=>{
+    var id=Number(req.params.id)
+    db.collection('orders').remove({id:id},(err,result)=>{
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
+//to delete all orders
+app.delete('/deleteAllOders',(req,res)=>{
+    // console.log('delete',req)
+    // res.send('deleted')
+    db.collection('orders').remove({},(err,result)=>{
+        if(err) throw err;
+        res.send(result)
     })
 })
 //connecting to mongodb server
