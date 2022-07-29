@@ -81,6 +81,29 @@ app.get('/mealtype/:id',(req,res)=>{
     })
 })
 
+//projection eaxample
+//filter api to get mealTypes and cuisines
+// app.get('/filter/:mealId',(req,res)=>{
+//     var id=Number(req.params.mealId)
+//     var query={"mealTypes.mealtype_id":id}
+//     if(req.query.mealTypes){
+//         query={"meallTypes.mealtype_id":id,
+//         "cuisines.cuisine_id":Number(req.query.cuisines)}
+//     }
+//     else if(req.query.lcost && req.query.hcost){
+//         let lcost=Number(req.query.lcost);
+//         let hcost=Number(req.query.hcost);
+
+//         query={$and: [{$cost:{$lt:lcost,$gt:hcost}}],
+//                 "meallTypes.mealtype_id":id
+//     }
+//     }    
+//     db.collection('restdata').find({query}).toArray((err,result)=>{
+//         if(err) throw err;
+//         res.send(result);
+//         console.log(req.body) 
+//     })
+// })
 app.post('/menus',(req,res)=>{
     console.log(req.body);
     // res.send(req.body);
@@ -117,12 +140,26 @@ app.get('/orders',(req,res)=>{
 })
 //to place order
 app.post('/placeOrder',(req,res)=>{
-    // console.log(req.body);
-    // res.send('ok')
-    db.collection('orders').insertMany(req.body,(err,result)=>{
+    console.log(req.body)
+    db.collection('orders').insertOne(req.body,(err,result)=>{
         if(err) throw err;
+        //res.send(req.body)
         res.send("Order Placed")
     })
+})
+//to update order
+app.put('/update/:id',(req,res)=>{
+    var id=Number(req.params.id)
+    var status=req.body.status?req.body.status:"pending"
+    db.collection('orders').updateOne(
+        {_id:id},
+        {
+            $set:{
+                "status":status
+            }
+        }
+    )
+    res.send('data updated')
 })
 
 //to delete one order

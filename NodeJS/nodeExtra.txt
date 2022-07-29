@@ -53,3 +53,15 @@ steps to install the global dependencies/packages
 
 npm i -g nodemon
 >>nodemon helps to do the continuous development
+
+
+update status
+db.collection_name.update(
+    {id:1},
+    {
+        $set:{"status":"confirm"}
+    }
+)
+
+projection : finding only few things from the object for a particular id.
+db.collection_name.find({condition},{projection})

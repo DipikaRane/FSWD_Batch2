@@ -18,3 +18,13 @@ e.g.: http://localhost:8520/restaurants?state=1
 
 get the menus in bulk/array
 http://localhost:8520/menus
+
+order api
+http://localhost:8520/orders
+
+placeOrder api
+http://localhost:8520/placeOrder
+
+delete api
+http://localhost:8520/deleteOrder   --- to delete one order wrt id
+http://localhost:8520/deleteAllOrders -- to delete all orders
