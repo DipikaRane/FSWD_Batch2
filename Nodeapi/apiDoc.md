@@ -16,8 +16,16 @@ restaurants with respect to state_id
 http://localhost:8520/restaurants?state=state_id
 e.g.: http://localhost:8520/restaurants?state=1
 
+
+listing page apis
 get the menus in bulk/array
 http://localhost:8520/menus
+
+get the restaurants wrt mealtype_id and cuisine_id
+http://localhost:8520/filter/1?cuisines=2
+
+get the restaurants wrt mealtype_id and cuisine_id and with lcost and hcost and sorting restaurants
+http://localhost:8520/filter/1?cuisines=2&&locst=300&&hcost=700
 
 order api
 http://localhost:8520/orders

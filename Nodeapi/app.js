@@ -3,12 +3,14 @@ var dotenv=require('dotenv');
 var app = express();
 var mongo = require('mongodb');
 var bodyParser=require('body-parser');
+var cors=require('cors');
 var MongoClient=mongo.MongoClient;
 dotenv.config();
-const mongoUrl=process.env.mongoLiveUrl;
+const mongoUrl='mongodb+srv://swiggyBatch2:swiggy@cluster0.0kef6.mongodb.net/?retryWrites=true&w=majority';
 var port=process.env.PORT || 8124;
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json());
+app.use(cors());
 var db;
 //first default route
 app.get('/',(req,res)=>{
@@ -83,27 +85,53 @@ app.get('/mealtype/:id',(req,res)=>{
 
 //projection eaxample
 //filter api to get mealTypes and cuisines
-// app.get('/filter/:mealId',(req,res)=>{
-//     var id=Number(req.params.mealId)
-//     var query={"mealTypes.mealtype_id":id}
-//     if(req.query.mealTypes){
-//         query={"meallTypes.mealtype_id":id,
-//         "cuisines.cuisine_id":Number(req.query.cuisines)}
-//     }
-//     else if(req.query.lcost && req.query.hcost){
-//         let lcost=Number(req.query.lcost);
-//         let hcost=Number(req.query.hcost);
-
-//         query={$and: [{$cost:{$lt:lcost,$gt:hcost}}],
-//                 "meallTypes.mealtype_id":id
-//     }
-//     }    
-//     db.collection('restdata').find({query}).toArray((err,result)=>{
-//         if(err) throw err;
-//         res.send(result);
-//         console.log(req.body) 
-//     })
-// })
+app.get('/filter/:mealId',(req,res)=>{
+    var id=parseInt(req.params.mealId);
+    var sort={cost:1}
+    var limit=100000;
+    var skip=0;
+    var query={"mealTypes.mealtype_id":id};
+    if(req.query.sortKey){
+        var sortKey=req.query.sortKey;
+        if(sortKey>1||sortKey<-1 || sortKey==0){
+            sortKey=1
+        }
+        sort={cost:Number(sortKey)}
+    }
+    if(req.query.skip && req.query.limit){
+        skip=Number(req.query.skip);
+        limit=Number(req.query.limit);
+    }
+    if(req.query.lcost && req.query.hcost){
+        var lcost=Number(req.query.lcost);
+        var hcost=Number(req.query.hcost);
+    }
+    if(req.query.cuisines && req.query.lcost && req.query.hcost){
+        query={$and:[{cost:{$gt:lcost,$lt:hcost}}],
+                "cuisines.cuisine_id":Number(req.query.cuisines),
+                "mealTypes.mealtype_id":id,              
+                }
+        // query={"cuisines.cuisine_id":Number(req.query.cuisines),
+        // "mealTypes.mealtype_id":id,}
+    }else if(req.query.cuisines){
+        query={"cuisines.cuisine_id":Number(req.query.cuisines),
+         "mealTypes.mealtype_id":id,}
+    }
+    else if(req.query.lcost && req.query.hcost){
+        query={$and:[{cost:{$gt:lcost,$lt:hcost}}],
+                "mealTypes.mealtype_id":id}
+    }
+    // else if(req.query.lcost && req.query.hcost){
+    //     let lcost=Number(req.query.lcost);
+    //     let hcost=Number(req.query.hcost);
+    //     query={$and:[{cost:{$gt:lcost,$lt:hcost}}],
+    //     "mealTypes.mealtype_id":id}
+    // }
+    db.collection('restdata').find(query).sort(sort).skip(skip).limit(limit).toArray((err,result)=>{
+        if(err) throw err;
+        res.send(result);
+    })
+})
 app.post('/menus',(req,res)=>{
     console.log(req.body);
     // res.send(req.body);
